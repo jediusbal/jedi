@@ -1,174 +1,179 @@
-GET        /api/member_addresses(.:format)            api/v7/member_addresses#index {:format=>"json"}
-POST       /api/member_addresses(.:format)            api/v7/member_addresses#create {:format=>"json"}
-GET        /api/member_addresses/new(.:format)        api/v7/member_addresses#new {:format=>"json"}
-GET        /api/member_addresses/:id/edit(.:format)   api/v7/member_addresses#edit {:format=>"json"}
-GET        /api/member_addresses/:id(.:format)        api/v7/member_addresses#show {:format=>"json"}
-PATCH      /api/member_addresses/:id(.:format)        api/v7/member_addresses#update {:format=>"json"}
-PUT        /api/member_addresses/:id(.:format)        api/v7/member_addresses#update {:format=>"json"}
-DELETE     /api/member_addresses/:id(.:format)        api/v7/member_addresses#destroy {:format=>"json"}
-GET        /api/towns(.:format)                       api/v7/towns#index {:format=>"json"}
-POST       /api/towns(.:format)                       api/v7/towns#create {:format=>"json"}
-GET        /api/towns/new(.:format)                   api/v7/towns#new {:format=>"json"}
-GET        /api/towns/:id/edit(.:format)              api/v7/towns#edit {:format=>"json"}
-GET        /api/towns/:id(.:format)                   api/v7/towns#show {:format=>"json"}
-PATCH      /api/towns/:id(.:format)                   api/v7/towns#update {:format=>"json"}
-PUT        /api/towns/:id(.:format)                   api/v7/towns#update {:format=>"json"}
-DELETE     /api/towns/:id(.:format)                   api/v7/towns#destroy {:format=>"json"}
-GET        /api/products/get_item_discount(.:format)                   api/v7/products#get_item_discount {:format=>"json"}
-GET        /api/products(.:format)                                     api/v7/products#index {:format=>"json"}
-POST       /api/products(.:format)                                     api/v7/products#create {:format=>"json"}
-GET        /api/products/new(.:format)                                 api/v7/products#new {:format=>"json"}
-GET        /api/products/:id/edit(.:format)                            api/v7/products#edit {:format=>"json"}
-GET        /api/products/:id(.:format)                                 api/v7/products#show {:format=>"json"}
-PATCH      /api/products/:id(.:format)                                 api/v7/products#update {:format=>"json"}
-PUT        /api/products/:id(.:format)                                 api/v7/products#update {:format=>"json"}
-DELETE     /api/products/:id(.:format)                                 api/v7/products#destroy {:format=>"json"}
-GET        /api/points_product_redemption_records(.:format)            api/v7/points_product_redemption_records#index {:format=>"json"}
-POST       /api/points_product_redemption_records(.:format)            api/v7/points_product_redemption_records#create {:format=>"json"}
-GET        /api/points_product_redemption_records/new(.:format)        api/v7/points_product_redemption_records#new {:format=>"json"}
-GET        /api/points_product_redemption_records/:id/edit(.:format)   api/v7/points_product_redemption_records#edit {:format=>"json"}
-GET        /api/points_product_redemption_records/:id(.:format)        api/v7/points_product_redemption_records#show {:format=>"json"}
-PATCH      /api/points_product_redemption_records/:id(.:format)        api/v7/points_product_redemption_records#update {:format=>"json"}
-PUT        /api/points_product_redemption_records/:id(.:format)        api/v7/points_product_redemption_records#update {:format=>"json"}
-DELETE     /api/points_product_redemption_records/:id(.:format)        api/v7/points_product_redemption_records#destroy {:format=>"json"}
-POST       /api/points_products/:id/redeem(.:format)                   api/v7/points_products#redeem {:format=>"json"}
-GET        /api/points_products(.:format)                              api/v7/points_products#index {:format=>"json"}
-POST       /api/points_products(.:format)                              api/v7/points_products#create {:format=>"json"}
-GET        /api/points_products/new(.:format)                          api/v7/points_products#new {:format=>"json"}
-GET        /api/points_products/:id/edit(.:format)                     api/v7/points_products#edit {:format=>"json"}
-GET        /api/points_products/:id(.:format)                          api/v7/points_products#show {:format=>"json"}
-PATCH      /api/points_products/:id(.:format)                          api/v7/points_products#update {:format=>"json"}
-PUT        /api/points_products/:id(.:format)                          api/v7/points_products#update {:format=>"json"}
-DELETE     /api/points_products/:id(.:format)                          api/v7/points_products#destroy {:format=>"json"}
-POST       /api/payments/get_session(.:format)                         api/v7/payments#get_session {:format=>"json"}
-GET        /api/payments(.:format)                                     api/v7/payments#index {:format=>"json"}
-POST       /api/payments(.:format)                                     api/v7/payments#create {:format=>"json"}
-GET        /api/payments/new(.:format)                                 api/v7/payments#new {:format=>"json"}
-GET        /api/payments/:id/edit(.:format)                            api/v7/payments#edit {:format=>"json"}
-GET        /api/payments/:id(.:format)                                 api/v7/payments#show {:format=>"json"}
-PATCH      /api/payments/:id(.:format)                                 api/v7/payments#update {:format=>"json"}
-PUT        /api/payments/:id(.:format)                                 api/v7/payments#update {:format=>"json"}
-DELETE     /api/payments/:id(.:format)                                 api/v7/payments#destroy {:format=>"json"}
-GET        /api/discounts/verify_code(.:format)                        api/v7/discounts#verify_code {:format=>"json"}
-GET        /api/discounts(.:format)                                    api/v7/discounts#index {:format=>"json"}
-POST       /api/discounts(.:format)                                    api/v7/discounts#create {:format=>"json"}
-GET        /api/discounts/new(.:format)                                api/v7/discounts#new {:format=>"json"}
-GET        /api/discounts/:id/edit(.:format)                           api/v7/discounts#edit {:format=>"json"}
-GET        /api/discounts/:id(.:format)                                api/v7/discounts#show {:format=>"json"}
-PATCH      /api/discounts/:id(.:format)                                api/v7/discounts#update {:format=>"json"}
-PUT        /api/discounts/:id(.:format)                                api/v7/discounts#update {:format=>"json"}
-DELETE     /api/discounts/:id(.:format)                                api/v7/discounts#destroy {:format=>"json"}
-GET        /api/coupon_codes/verify_code(.:format)                     api/v7/coupon_codes#verify_code {:format=>"json"}
-GET        /api/coupon_codes/redeem_code(.:format)                     api/v7/coupon_codes#redeem_code {:format=>"json"}
-GET        /api/coupon_codes(.:format)                                 api/v7/coupon_codes#index {:format=>"json"}
-POST       /api/coupon_codes(.:format)                                 api/v7/coupon_codes#create {:format=>"json"}
-GET        /api/coupon_codes/new(.:format)                             api/v7/coupon_codes#new {:format=>"json"}
-GET        /api/coupon_codes/:id/edit(.:format)                        api/v7/coupon_codes#edit {:format=>"json"}
-GET        /api/coupon_codes/:id(.:format)                             api/v7/coupon_codes#show {:format=>"json"}
-PATCH      /api/coupon_codes/:id(.:format)                             api/v7/coupon_codes#update {:format=>"json"}
-PUT        /api/coupon_codes/:id(.:format)                             api/v7/coupon_codes#update {:format=>"json"}
-DELETE     /api/coupon_codes/:id(.:format)                             api/v7/coupon_codes#destroy {:format=>"json"}
-POST       /api/member/login(.:format)                                 api/v7/sessions#login {:format=>"json"}
-POST       /api/member/login_with_facebook(.:format)                   api/v7/sessions#login_with_facebook {:format=>"json"}
-POST       /api/member/activate_account(.:format)                      api/v7/sessions#activate_account {:format=>"json"}
-DELETE     /api/member/sign_out(.:format)                              api/v7/sessions#destroy {:format=>"json"}
-POST       /api/member/change_password(.:format)                       api/v7/sessions#change_password {:format=>"json"}
-POST       /api/member/forget_password(.:format)                       api/v7/sessions#forget_password {:format=>"json"}
-POST       /api/merchant/login(.:format)                               api/v7/merchants#login {:format=>"json"}
-POST       /api/merchant/top_up_request(.:format)                      api/v7/merchants#top_up_request {:format=>"json"}
-GET        /api/merchant/top_up_request_check(.:format)                api/v7/merchants#check_top_up_request {:format=>"json"}
-GET        /api/members/:id/qr_code(.:format)                          api/v7/members#qr_code {:format=>"json"}
-GET        /api/members/:id/notifications(.:format)                    api/v7/members#notifications {:format=>"json"}
-GET        /api/members/:id/current_status(.:format)                   api/v7/members#current_status {:format=>"json"}
-GET        /api/members/:id/profile(.:format)                          api/v7/members#profile {:format=>"json"}
-POST       /api/members/:id/update_profile(.:format)                   api/v7/members#update_profile {:format=>"json"}
-POST       /api/members/:id/update_avatar(.:format)                    api/v7/members#update_avatar {:format=>"json"}
-POST       /api/members/:id/update_phone_number(.:format)              api/v7/members#update_phone_number {:format=>"json"}
-POST       /api/members/:id/verify_phone_number_update(.:format)       api/v7/members#verify_phone_number_update {:format=>"json"}
-GET        /api/members/:id/orders(.:format)                           api/v7/members#orders {:format=>"json"}
-GET        /api/members/:id/current_order(.:format)                    api/v7/members#current_order {:format=>"json"}
-GET        /api/members/:id/point_product_redemption(.:format)         api/v7/members#point_product_redemption {:format=>"json"}
-POST       /api/members/:id/qr_code_scan(.:format)                     api/v7/members#qr_code_scan {:format=>"json"}
-GET        /api/members/:id/scan_status(.:format)                      api/v7/members#scan_status {:format=>"json"}
-GET        /api/members/:id/mission_statements(.:format)               api/v7/members#mission_statements {:format=>"json"}
-POST       /api/members/:id/claim_mission_reward(.:format)             api/v7/members#claim_mission_reward {:format=>"json"}
-POST       /api/members/:id/login_mission(.:format)                    api/v7/members#login_mission {:format=>"json"}
-GET        /api/members/:id/get_member_addresses(.:format)             api/v7/members#get_member_addresses {:format=>"json"}
-POST       /api/members/:id/save_member_addresses(.:format)            api/v7/members#save_member_addresses {:format=>"json"}
-GET        /api/members(.:format)                                      api/v7/members#index {:format=>"json"}
-POST       /api/members(.:format)                                      api/v7/members#create {:format=>"json"}
-GET        /api/members/new(.:format)                                  api/v7/members#new {:format=>"json"}
-GET        /api/members/:id/edit(.:format)                             api/v7/members#edit {:format=>"json"}
-GET        /api/members/:id(.:format)                                  api/v7/members#show {:format=>"json"}
-PATCH      /api/members/:id(.:format)                                  api/v7/members#update {:format=>"json"}
-PUT        /api/members/:id(.:format)                                  api/v7/members#update {:format=>"json"}
-DELETE     /api/members/:id(.:format)                                  api/v7/members#destroy {:format=>"json"}
-POST       /api/top_up_products/:id/make_order(.:format)               api/v7/top_up_products#make_order {:format=>"json"}
-GET        /api/top_up_products(.:format)                              api/v7/top_up_products#index {:format=>"json"}
-POST       /api/top_up_products(.:format)                              api/v7/top_up_products#create {:format=>"json"}
-GET        /api/top_up_products/new(.:format)                          api/v7/top_up_products#new {:format=>"json"}
-GET        /api/top_up_products/:id/edit(.:format)                     api/v7/top_up_products#edit {:format=>"json"}
-GET        /api/top_up_products/:id(.:format)                          api/v7/top_up_products#show {:format=>"json"}
-PATCH      /api/top_up_products/:id(.:format)                          api/v7/top_up_products#update {:format=>"json"}
-PUT        /api/top_up_products/:id(.:format)                          api/v7/top_up_products#update {:format=>"json"}
-DELETE     /api/top_up_products/:id(.:format)                          api/v7/top_up_products#destroy {:format=>"json"}
-POST       /api/members/:id/valid_vouchers(.:format)                   api/v7/vouchers#valid_vouchers {:format=>"json"}
-GET        /api/members/:id/vouchers(.:format)                         api/v7/vouchers#member_vouchers {:format=>"json"}
-POST       /api/members/:id/store_push_token(.:format)                 api/v7/members#store_push_token {:format=>"json"}
-GET        /api/members/:id/point_history(.:format)                    api/v7/point_statements#index {:format=>"json"}
-GET        /api/members/:id/credit_history(.:format)                   api/v7/credit_statements#index {:format=>"json"}
-GET        /api/companies/:id/shops/all(.:format)                      api/v7/companies#all {:format=>"json"}
-GET        /api/companies/:id/shops/:shop_id(.:format)                 api/v7/companies#shop {:format=>"json"}
-GET        /api/companies/:id/shop_kiosk/:shop_id(.:format)            api/v7/companies#shop_kiosk {:format=>"json"}
-GET        /api/companies/:company_id/favorite_shops(.:format)         api/v7/favorite_shops#index {:format=>"json"}
-POST       /api/companies/:company_id/favorite_shops(.:format)         api/v7/favorite_shops#create {:format=>"json"}
-DELETE     /api/companies/:company_id/favorite_shops/:id(.:format)     api/v7/favorite_shops#destroy {:format=>"json"}
-GET        /api/companies/:id/points_products(.:format)                api/v7/companies#points_products {:format=>"json"}
-GET        /api/companies/:id/membership_plans(.:format)               api/v7/companies#membership_plans {:format=>"json"}
-GET        /api/companies/:id/shops_kiosks(.:format)                   api/v7/companies#shops_kiosks {:format=>"json"}
-GET        /api/companies/:id/top_up_products(.:format)                api/v7/companies#top_up_products {:format=>"json"}
-GET        /api/companies/:id/missions(.:format)                       api/v7/companies#missions {:format=>"json"}
-GET        /api/companies(.:format)                                    api/v7/companies#index {:format=>"json"}
-POST       /api/companies(.:format)                                    api/v7/companies#create {:format=>"json"}
-GET        /api/companies/new(.:format)                                api/v7/companies#new {:format=>"json"}
-GET        /api/companies/:id/edit(.:format)                           api/v7/companies#edit {:format=>"json"}
-GET        /api/companies/:id(.:format)                                api/v7/companies#show {:format=>"json"}
-PATCH      /api/companies/:id(.:format)                                api/v7/companies#update {:format=>"json"}
-PUT        /api/companies/:id(.:format)                                api/v7/companies#update {:format=>"json"}
-DELETE     /api/companies/:id(.:format)                                api/v7/companies#destroy {:format=>"json"}
-POST       /api/missions/:id/claim_mission_reward(.:format)            api/v7/missions#claim_mission_reward {:format=>"json"}
-GET        /api/missions(.:format)                                     api/v7/missions#index {:format=>"json"}
-POST       /api/missions(.:format)                                     api/v7/missions#create {:format=>"json"}
-GET        /api/missions/new(.:format)                                 api/v7/missions#new {:format=>"json"}
-GET        /api/missions/:id/edit(.:format)                            api/v7/missions#edit {:format=>"json"}
-GET        /api/missions/:id(.:format)                                 api/v7/missions#show {:format=>"json"}
-PATCH      /api/missions/:id(.:format)                                 api/v7/missions#update {:format=>"json"}
-PUT        /api/missions/:id(.:format)                                 api/v7/missions#update {:format=>"json"}
-DELETE     /api/missions/:id(.:format)                                 api/v7/missions#destroy {:format=>"json"}
-GET        /api/membership_plans/:id/points_products(.:format)         api/v7/membership_plans#points_products {:format=>"json"}
-GET        /api/membership_plans(.:format)                             api/v7/membership_plans#index {:format=>"json"}
-POST       /api/membership_plans(.:format)                             api/v7/membership_plans#create {:format=>"json"}
-GET        /api/membership_plans/new(.:format)                         api/v7/membership_plans#new {:format=>"json"}
-GET        /api/membership_plans/:id/edit(.:format)                    api/v7/membership_plans#edit {:format=>"json"}
-GET        /api/membership_plans/:id(.:format)                         api/v7/membership_plans#show {:format=>"json"}
-PATCH      /api/membership_plans/:id(.:format)                         api/v7/membership_plans#update {:format=>"json"}
-PUT        /api/membership_plans/:id(.:format)                         api/v7/membership_plans#update {:format=>"json"}
-DELETE     /api/membership_plans/:id(.:format)                         api/v7/membership_plans#destroy {:format=>"json"}
-GET        /api/shops/:shop_id/products/item_discount(.:format)        api/v7/products#item_discount {:format=>"json"}
-GET        /api/shops/:shop_id/products/get_item_discount(.:format)    api/v7/products#get_item_discount {:format=>"json"}
-GET        /api/shops/:id/get_delivery_fee(.:format)                   api/v7/shops#get_delivery_fee {:format=>"json"}
-GET        /api/shops/:id/get_areas(.:format)                          api/v7/shops#get_areas {:format=>"json"}
-POST       /api/shops/:id/make_order(.:format)                         api/v7/shops#make_order {:format=>"json"}
-GET        /api/shops(.:format)                                        api/v7/shops#index {:format=>"json"}
-POST       /api/shops(.:format)                                        api/v7/shops#create {:format=>"json"}
-GET        /api/shops/new(.:format)                                    api/v7/shops#new {:format=>"json"}
-GET        /api/shops/:id/edit(.:format)                               api/v7/shops#edit {:format=>"json"}
-GET        /api/shops/:id(.:format)                                    api/v7/shops#show {:format=>"json"}
-PATCH      /api/shops/:id(.:format)                                    api/v7/shops#update {:format=>"json"}
-PUT        /api/shops/:id(.:format)                                    api/v7/shops#update {:format=>"json"}
-DELETE     /api/shops/:id(.:format)                                    api/v7/shops#destroy {:format=>"json"}
-GET        /api/shops/:id(.:format)                                    api/v7/shops#show {:format=>"json"}
-GET        /api/shops/:id/products(.:format)                           api/v7/shops#products {:format=>"json"}
-GET        /api/shops/:id/products_kiosk(.:format)                     api/v7/shops#products_kiosk {:format=>"json"}
-POST       /api/orders/:id/order_review(.:format)                      api/v7/orders#order_review {:format=>"json"}
-GET        /api/config_data(.:format)                                  api/v7/config_data#index {:format=>"json"}
+GET        /api/companies                                    companies#index
+GET        /api/companies/:company_id/favorite_shops         favorite_shops#index
+GET        /api/companies/:id                                companies#show
+GET        /api/companies/:id/edit                           companies#edit
+GET        /api/companies/:id/membership_plans               companies#membership_plans
+GET        /api/companies/:id/missions                       companies#missions
+GET        /api/companies/:id/points_products                companies#points_products
+GET        /api/companies/:id/shop_kiosk/:shop_id            companies#shop_kiosk
+GET        /api/companies/:id/shops/:shop_id                 companies#shop
+GET        /api/companies/:id/shops/all                      companies#all
+GET        /api/companies/:id/shops_kiosks                   companies#shops_kiosks
+GET        /api/companies/:id/top_up_products                companies#top_up_products
+GET        /api/companies/new                                companies#new
+GET        /api/config_data                                  config_data#index
+GET        /api/coupon_codes                                 coupon_codes#index
+GET        /api/coupon_codes/:id                             coupon_codes#show
+GET        /api/coupon_codes/:id/edit                        coupon_codes#edit
+GET        /api/coupon_codes/new                             coupon_codes#new
+GET        /api/coupon_codes/redeem_code                     coupon_codes#redeem_code
+GET        /api/coupon_codes/verify_code                     coupon_codes#verify_code
+GET        /api/discounts                                    discounts#index
+GET        /api/discounts/:id                                discounts#show
+GET        /api/discounts/:id/edit                           discounts#edit
+GET        /api/discounts/new                                discounts#new
+GET        /api/discounts/verify_code                        discounts#verify_code
+GET        /api/member_addresses                             member_addresses#index
+GET        /api/member_addresses/:id                         member_addresses#show
+GET        /api/member_addresses/:id/edit                    member_addresses#edit
+GET        /api/member_addresses/new                         member_addresses#new
+GET        /api/members                                      members#index
+GET        /api/members/:id                                  members#show
+GET        /api/members/:id/credit_history                   credit_statements#index
+GET        /api/members/:id/current_order                    members#current_order
+GET        /api/members/:id/current_status                   members#current_status
+GET        /api/members/:id/edit                             members#edit
+GET        /api/members/:id/get_member_addresses             members#get_member_addresses
+GET        /api/members/:id/mission_statements               members#mission_statements
+GET        /api/members/:id/notifications                    members#notifications
+GET        /api/members/:id/orders                           members#orders
+GET        /api/members/:id/point_history                    point_statements#index
+GET        /api/members/:id/point_product_redemption         members#point_product_redemption
+GET        /api/members/:id/profile                          members#profile
+GET        /api/members/:id/qr_code                          members#qr_code
+GET        /api/members/:id/scan_status                      members#scan_status
+GET        /api/members/:id/vouchers                         vouchers#member_vouchers
+GET        /api/members/new                                  members#new
+GET        /api/membership_plans                             membership_plans#index
+GET        /api/membership_plans/:id                         membership_plans#show
+GET        /api/membership_plans/:id/edit                    membership_plans#edit
+GET        /api/membership_plans/:id/points_products         membership_plans#points_products
+GET        /api/membership_plans/new                         membership_plans#new
+GET        /api/merchant/top_up_request_check                merchants#check_top_up_request
+GET        /api/missions                                     missions#index
+GET        /api/missions/:id                                 missions#show
+GET        /api/missions/:id/edit                            missions#edit
+GET        /api/missions/new                                 missions#new
+GET        /api/payments                                     payments#index
+GET        /api/payments/:id                                 payments#show
+GET        /api/payments/:id/edit                            payments#edit
+GET        /api/payments/new                                 payments#new
+GET        /api/points_product_redemption_records            points_product_redemption_records#index
+GET        /api/points_product_redemption_records/:id        points_product_redemption_records#show
+GET        /api/points_product_redemption_records/:id/edit   points_product_redemption_records#edit
+GET        /api/points_product_redemption_records/new        points_product_redemption_records#new
+GET        /api/points_products                              points_products#index
+GET        /api/points_products/:id                          points_products#show
+GET        /api/points_products/:id/edit                     points_products#edit
+GET        /api/points_products/new                          points_products#new
+GET        /api/products                                     products#index
+GET        /api/products/:id                                 products#show
+GET        /api/products/:id/edit                            products#edit
+GET        /api/products/get_item_discount                   products#get_item_discount
+GET        /api/products/new                                 products#new
+GET        /api/shops                                        shops#index
+GET        /api/shops/:id                                    shops#show
+GET        /api/shops/:id                                    shops#show
+GET        /api/shops/:id/edit                               shops#edit
+GET        /api/shops/:id/get_areas                          shops#get_areas
+GET        /api/shops/:id/get_delivery_fee                   shops#get_delivery_fee
+GET        /api/shops/:id/products                           shops#products
+GET        /api/shops/:id/products_kiosk                     shops#products_kiosk
+GET        /api/shops/:shop_id/products/get_item_discount    products#get_item_discount
+GET        /api/shops/:shop_id/products/item_discount        products#item_discount
+GET        /api/shops/new                                    shops#new
+GET        /api/top_up_products                              top_up_products#index
+GET        /api/top_up_products/:id                          top_up_products#show
+GET        /api/top_up_products/:id/edit                     top_up_products#edit
+GET        /api/top_up_products/new                          top_up_products#new
+GET        /api/towns                                        towns#index
+GET        /api/towns/:id                                    towns#show
+GET        /api/towns/:id/edit                               towns#edit
+GET        /api/towns/new                                    towns#new
+
+POST       /api/companies                                    companies#create
+POST       /api/companies/:company_id/favorite_shops         favorite_shops#create
+POST       /api/coupon_codes                                 coupon_codes#create
+POST       /api/discounts                                    discounts#create
+POST       /api/member/activate_account                      sessions#activate_account
+POST       /api/member/change_password                       sessions#change_password
+POST       /api/member/forget_password                       sessions#forget_password
+POST       /api/member/login                                 sessions#login
+POST       /api/member/login_with_facebook                   sessions#login_with_facebook
+POST       /api/member_addresses                             member_addresses#create
+POST       /api/members                                      members#create
+POST       /api/members/:id/claim_mission_reward             members#claim_mission_reward
+POST       /api/members/:id/login_mission                    members#login_mission
+POST       /api/members/:id/qr_code_scan                     members#qr_code_scan
+POST       /api/members/:id/save_member_addresses            members#save_member_addresses
+POST       /api/members/:id/store_push_token                 members#store_push_token
+POST       /api/members/:id/update_avatar                    members#update_avatar
+POST       /api/members/:id/update_phone_number              members#update_phone_number
+POST       /api/members/:id/update_profile                   members#update_profile
+POST       /api/members/:id/valid_vouchers                   vouchers#valid_vouchers
+POST       /api/members/:id/verify_phone_number_update       members#verify_phone_number_update
+POST       /api/membership_plans                             membership_plans#create
+POST       /api/merchant/login                               merchants#login
+POST       /api/merchant/top_up_request                      merchants#top_up_request
+POST       /api/missions                                     missions#create
+POST       /api/missions/:id/claim_mission_reward            missions#claim_mission_reward
+POST       /api/orders/:id/order_review                      orders#order_review
+POST       /api/payments                                     payments#create
+POST       /api/payments/get_session                         payments#get_session
+POST       /api/points_product_redemption_records            points_product_redemption_records#create
+POST       /api/points_products                              points_products#create
+POST       /api/points_products/:id/redeem                   points_products#redeem
+POST       /api/products                                     products#create
+POST       /api/shops                                        shops#create
+POST       /api/shops/:id/make_order                         shops#make_order
+POST       /api/top_up_products                              top_up_products#create
+POST       /api/top_up_products/:id/make_order               top_up_products#make_order
+POST       /api/towns                                        towns#create
+
+PATCH      /api/companies/:id                                companies#update
+PATCH      /api/coupon_codes/:id                             coupon_codes#update
+PATCH      /api/discounts/:id                                discounts#update
+PATCH      /api/member_addresses/:id                         member_addresses#update
+PATCH      /api/members/:id                                  members#update
+PATCH      /api/membership_plans/:id                         membership_plans#update
+PATCH      /api/missions/:id                                 missions#update
+PATCH      /api/payments/:id                                 payments#update
+PATCH      /api/points_product_redemption_records/:id        points_product_redemption_records#update
+PATCH      /api/points_products/:id                          points_products#update
+PATCH      /api/products/:id                                 products#update
+PATCH      /api/shops/:id                                    shops#update
+PATCH      /api/top_up_products/:id                          top_up_products#update
+PATCH      /api/towns/:id                                    towns#update
+
+PUT        /api/companies/:id                                companies#update
+PUT        /api/coupon_codes/:id                             coupon_codes#update
+PUT        /api/discounts/:id                                discounts#update
+PUT        /api/member_addresses/:id                         member_addresses#update
+PUT        /api/members/:id                                  members#update
+PUT        /api/membership_plans/:id                         membership_plans#update
+PUT        /api/missions/:id                                 missions#update
+PUT        /api/payments/:id                                 payments#update
+PUT        /api/points_product_redemption_records/:id        points_product_redemption_records#update
+PUT        /api/points_products/:id                          points_products#update
+PUT        /api/products/:id                                 products#update
+PUT        /api/shops/:id                                    shops#update
+PUT        /api/top_up_products/:id                          top_up_products#update
+PUT        /api/towns/:id                                    towns#update
+
+DELETE     /api/companies/:company_id/favorite_shops/:id     favorite_shops#destroy
+DELETE     /api/companies/:id                                companies#destroy
+DELETE     /api/coupon_codes/:id                             coupon_codes#destroy
+DELETE     /api/discounts/:id                                discounts#destroy
+DELETE     /api/member/sign_out                              sessions#destroy
+DELETE     /api/member_addresses/:id                         member_addresses#destroy
+DELETE     /api/members/:id                                  members#destroy
+DELETE     /api/membership_plans/:id                         membership_plans#destroy
+DELETE     /api/missions/:id                                 missions#destroy
+DELETE     /api/payments/:id                                 payments#destroy
+DELETE     /api/points_product_redemption_records/:id        points_product_redemption_records#destroy
+DELETE     /api/points_products/:id                          points_products#destroy
+DELETE     /api/products/:id                                 products#destroy
+DELETE     /api/shops/:id                                    shops#destroy
+DELETE     /api/top_up_products/:id                          top_up_products#destroy
+DELETE     /api/towns/:id                                    towns#destroy
+
