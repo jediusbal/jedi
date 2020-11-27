@@ -1,0 +1,16 @@
+DELETE     /api/companies/:company_id/favorite_shops/:id     favorite_shops#destroy
+DELETE     /api/companies/:id                                companies#destroy
+DELETE     /api/coupon_codes/:id                             coupon_codes#destroy
+DELETE     /api/discounts/:id                                discounts#destroy
+DELETE     /api/member/sign_out                              sessions#destroy
+DELETE     /api/member_addresses/:id                         member_addresses#destroy
+DELETE     /api/members/:id                                  members#destroy
+DELETE     /api/membership_plans/:id                         membership_plans#destroy
+DELETE     /api/missions/:id                                 missions#destroy
+DELETE     /api/payments/:id                                 payments#destroy
+DELETE     /api/points_product_redemption_records/:id        points_product_redemption_records#destroy
+DELETE     /api/points_products/:id                          points_products#destroy
+DELETE     /api/products/:id                                 products#destroy
+DELETE     /api/shops/:id                                    shops#destroy
+DELETE     /api/top_up_products/:id                          top_up_products#destroy
+DELETE     /api/towns/:id                                    towns#destroy
