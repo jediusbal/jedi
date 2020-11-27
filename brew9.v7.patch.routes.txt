@@ -1,0 +1,31 @@
+PATCH      /api/companies/:id                                companies#update
+PATCH      /api/coupon_codes/:id                             coupon_codes#update
+PATCH      /api/discounts/:id                                discounts#update
+PATCH      /api/member_addresses/:id                         member_addresses#update
+PATCH      /api/members/:id                                  members#update
+PATCH      /api/membership_plans/:id                         membership_plans#update
+PATCH      /api/missions/:id                                 missions#update
+PATCH      /api/payments/:id                                 payments#update
+PATCH      /api/points_product_redemption_records/:id        points_product_redemption_records#update
+PATCH      /api/points_products/:id                          points_products#update
+PATCH      /api/products/:id                                 products#update
+PATCH      /api/shops/:id                                    shops#update
+PATCH      /api/top_up_products/:id                          top_up_products#update
+PATCH      /api/towns/:id                                    towns#update
+
+PUT        /api/companies/:id                                companies#update
+PUT        /api/coupon_codes/:id                             coupon_codes#update
+PUT        /api/discounts/:id                                discounts#update
+PUT        /api/member_addresses/:id                         member_addresses#update
+PUT        /api/members/:id                                  members#update
+PUT        /api/membership_plans/:id                         membership_plans#update
+PUT        /api/missions/:id                                 missions#update
+PUT        /api/payments/:id                                 payments#update
+PUT        /api/points_product_redemption_records/:id        points_product_redemption_records#update
+PUT        /api/points_products/:id                          points_products#update
+PUT        /api/products/:id                                 products#update
+PUT        /api/shops/:id                                    shops#update
+PUT        /api/top_up_products/:id                          top_up_products#update
+PUT        /api/towns/:id                                    towns#update
+
+
