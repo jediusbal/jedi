@@ -1,92 +1,191 @@
 GET        /api/companies                                    companies#index
+                                                              MISSING METHOD
 GET        /api/companies/:company_id/favorite_shops         favorite_shops#index
+                                                              (params[:latitude], params[:longitude])
+                                                              params.permit(:latitude, :longitude)
 GET        /api/companies/:id                                companies#show
+                                                              MISSING METHOD
 GET        /api/companies/:id/edit                           companies#edit
+                                                              MISSING METHOD
 GET        /api/companies/:id/membership_plans               companies#membership_plans
+                                                              id
 GET        /api/companies/:id/missions                       companies#missions
+                                                              id 
 GET        /api/companies/:id/points_products                companies#points_products
+                                                              id 
 GET        /api/companies/:id/shop_kiosk/:shop_id            companies#shop_kiosk
+                                                              id
 GET        /api/companies/:id/shops/:shop_id                 companies#shop
+                                                              MISSING METHOD                                           
 GET        /api/companies/:id/shops/all                      companies#all
+                                                              params.permit(:latitude, :longitude)
 GET        /api/companies/:id/shops_kiosks                   companies#shops_kiosks
+                                                              MISSING
 GET        /api/companies/:id/top_up_products                companies#top_up_products
+                                                              id
 GET        /api/companies/new                                companies#new
+                                                              MISSING
 GET        /api/config_data                                  config_data#index
+                                                              OK: no params
 GET        /api/coupon_codes                                 coupon_codes#index
+                                                              MISSING METHOD
 GET        /api/coupon_codes/:id                             coupon_codes#show
+                                                              MISSING METHOD
 GET        /api/coupon_codes/:id/edit                        coupon_codes#edit
+                                                              MISSING METHOD
 GET        /api/coupon_codes/new                             coupon_codes#new
+                                                              MISSING METHOD
 GET        /api/coupon_codes/redeem_code                     coupon_codes#redeem_code
+                                                              OK: no params
 GET        /api/coupon_codes/verify_code                     coupon_codes#verify_code
+                                                              OK: no params
 GET        /api/discounts                                    discounts#index
+                                                              MISSING
 GET        /api/discounts/:id                                discounts#show
+                                                              MISSING
 GET        /api/discounts/:id/edit                           discounts#edit
+                                                              MISSING
 GET        /api/discounts/new                                discounts#new
+                                                              MISSING
 GET        /api/discounts/verify_code                        discounts#verify_code
+                                                              (params[:code])
 GET        /api/member_addresses                             member_addresses#index
+                                                              MISSING
 GET        /api/member_addresses/:id                         member_addresses#show
+                                                              MISSING
 GET        /api/member_addresses/:id/edit                    member_addresses#edit
+                                                              MISSING
 GET        /api/member_addresses/new                         member_addresses#new
+                                                              MISSING
 GET        /api/members                                      members#index
+                                                              MISSING
 GET        /api/members/:id                                  members#show
+                                                              MISSING
 GET        /api/members/:id/credit_history                   credit_statements#index
+                                                              params[:page_no].to_i || 0
+                                                              shop_id
 GET        /api/members/:id/current_order                    members#current_order
+                                                              request_obj.set_params(params)
 GET        /api/members/:id/current_status                   members#current_status
+                                                              params[:id]
+                                                              params[:last_read].to_i || 0
 GET        /api/members/:id/edit                             members#edit
+                                                              request_obj.set_params(params)
 GET        /api/members/:id/get_member_addresses             members#get_member_addresses
+                                                              id
 GET        /api/members/:id/mission_statements               members#mission_statements
+                                                              request_obj.set_params(params)
 GET        /api/members/:id/notifications                    members#notifications
+                                                              id
 GET        /api/members/:id/orders                           members#orders
+                                                              request_obj.set_params(params)
 GET        /api/members/:id/point_history                    point_statements#index
+                                                              params[:page_no].to_i || 0
 GET        /api/members/:id/point_product_redemption         members#point_product_redemption
+                                                              params[:page_no].to_i || 0
 GET        /api/members/:id/profile                          members#profile
+                                                              MISSING METHOD
 GET        /api/members/:id/qr_code                          members#qr_code
+                                                              id
 GET        /api/members/:id/scan_status                      members#scan_status
+                                                              request_obj.set_params(params)
 GET        /api/members/:id/vouchers                         vouchers#member_vouchers
+                                                              id
+                                                              params[:page_no].to_i || 0
+                                                              params[:status].to_i || 0
 GET        /api/members/new                                  members#new
+                                                              MISSING
 GET        /api/membership_plans                             membership_plans#index
+                                                              MISSING METHOD 
 GET        /api/membership_plans/:id                         membership_plans#show
+                                                              MISSING METHOD
 GET        /api/membership_plans/:id/edit                    membership_plans#edit
+                                                              MISSING METHOD
 GET        /api/membership_plans/:id/points_products         membership_plans#points_products
+                                                              id
 GET        /api/membership_plans/new                         membership_plans#new
+                                                              MISSING METHOD
 GET        /api/merchant/top_up_request_check                merchants#check_top_up_request
+                                                              request_obj.set_params(params)
 GET        /api/missions                                     missions#index
+                                                              MISSING METHOD
 GET        /api/missions/:id                                 missions#show
+                                                              MISSING METHOD
 GET        /api/missions/:id/edit                            missions#edit
+                                                              MISSING METHOD
 GET        /api/missions/new                                 missions#new
+                                                              MISSING METHOD
 GET        /api/payments                                     payments#index
+                                                              MISSING METHOD
 GET        /api/payments/:id                                 payments#show
+                                                              MISSING METHOD 
 GET        /api/payments/:id/edit                            payments#edit
+                                                              MISSING METHOD
 GET        /api/payments/new                                 payments#new
+                                                              MISSING METHOD
 GET        /api/points_product_redemption_records            points_product_redemption_records#index
+                                                              params[:page_no].to_i || 0
 GET        /api/points_product_redemption_records/:id        points_product_redemption_records#show
+                                                              MISSING METHOD
 GET        /api/points_product_redemption_records/:id/edit   points_product_redemption_records#edit
+                                                              MISSING METHOD
 GET        /api/points_product_redemption_records/new        points_product_redemption_records#new
+                                                              MISSING METHOD
 GET        /api/points_products                              points_products#index
+                                                              MISSING METHOD
 GET        /api/points_products/:id                          points_products#show
+                                                              id
 GET        /api/points_products/:id/edit                     points_products#edit
+                                                              MISSING METHOD
 GET        /api/points_products/new                          points_products#new
+                                                              MISSING METHOD
 GET        /api/products                                     products#index
+                                                              MISSING METHOD
 GET        /api/products/:id                                 products#show
+                                                              MISSING METHOD
 GET        /api/products/:id/edit                            products#edit
+                                                              MISSING METHOD
 GET        /api/products/get_item_discount                   products#get_item_discount
+                                                              shop_id
 GET        /api/products/new                                 products#new
+                                                              MISSING METHOD
 GET        /api/shops                                        shops#index
+                                                              MISSING METHOD
 GET        /api/shops/:id                                    shops#show
+                                                              id
 GET        /api/shops/:id                                    shops#show
+                                                              id
 GET        /api/shops/:id/edit                               shops#edit
+                                                              MISSING METHOD 
 GET        /api/shops/:id/get_areas                          shops#get_areas
+                                                              id
 GET        /api/shops/:id/get_delivery_fee                   shops#get_delivery_fee
+                                                              id
+                                                              params[:total].to_f
+                                                              address_id
 GET        /api/shops/:id/products                           shops#products
+                                                              MISSING METHOD
 GET        /api/shops/:id/products_kiosk                     shops#products_kiosk
+                                                              MISSING METHOD
 GET        /api/shops/:shop_id/products/get_item_discount    products#get_item_discount
+                                                              shop_id
 GET        /api/shops/:shop_id/products/item_discount        products#item_discount
+                                                              shop_id
 GET        /api/shops/new                                    shops#new
+                                                              MISSING METHOD
 GET        /api/top_up_products                              top_up_products#index
+                                                              MISSING METHOD
 GET        /api/top_up_products/:id                          top_up_products#show
+                                                              MISSING METHOD
 GET        /api/top_up_products/:id/edit                     top_up_products#edit
+                                                              MISSING METHOD
 GET        /api/top_up_products/new                          top_up_products#new
+                                                              MISSING METHOD
 GET        /api/towns                                        towns#index
+                                                              MISSING METHOD
 GET        /api/towns/:id                                    towns#show
+                                                              MISSING METHOD
 GET        /api/towns/:id/edit                               towns#edit
+                                                              MISSING METHOD
 GET        /api/towns/new                                    towns#new
+                                                              MISSING METHOD
