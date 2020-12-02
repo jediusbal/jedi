@@ -1,39 +1,114 @@
 POST       /api/companies                                    companies#create
+                                                              MISSING METHOD
 POST       /api/companies/:company_id/favorite_shops         favorite_shops#create
-POST       /api/coupon_codes                                 coupon_codes#create
+                                                              OK:NO PARAMS
+POST       /api/coupon_codes                                 coupon_codes#create                                                                                                                       MISSING METHOD
 POST       /api/discounts                                    discounts#create
+                                                              MISSING METHOD
 POST       /api/member/activate_account                      sessions#activate_account
+                                                              request_obj.set_params(params)
 POST       /api/member/change_password                       sessions#change_password
+                                                              MISSING METHOD
 POST       /api/member/forget_password                       sessions#forget_password
+                                                              MISSING METHOD
 POST       /api/member/login                                 sessions#login
+                                                              request_obj.set_params(params)
 POST       /api/member/login_with_facebook                   sessions#login_with_facebook
+                                                              request_obj.set_params(params)
 POST       /api/member_addresses                             member_addresses#create
+                                                              MISSING METHOD
 POST       /api/members                                      members#create
+                                                              MISSING METHOD
 POST       /api/members/:id/claim_mission_reward             members#claim_mission_reward
+                                                              id
 POST       /api/members/:id/login_mission                    members#login_mission
+                                                              OK:NO PARAMS
 POST       /api/members/:id/qr_code_scan                     members#qr_code_scan
+                                                              request_obj.set_params(params)
 POST       /api/members/:id/save_member_addresses            members#save_member_addresses
+                                                              id
+                                                              if params[:primary].present? && params[:primary] == "true"
+                                                              address_details
+                                                              fullname
+                                                              address
+                                                              contact_number
+                                                              city
+                                                              state
+                                                              postal_code
+                                                              country
+                                                              land_mark
+                                                              latitude
+                                                              longitude
+                                                              delivery_area
+                                                              tag
+                                                              primary: params[:primary].present? ? params[:primary] : false,
 POST       /api/members/:id/store_push_token                 members#store_push_token
+                                                              request_obj.set_params(params)
+                                                              id
 POST       /api/members/:id/update_avatar                    members#update_avatar
+                                                              request_obj.set_params(params)
 POST       /api/members/:id/update_phone_number              members#update_phone_number
+                                                              request_obj.set_params(params)
 POST       /api/members/:id/update_profile                   members#update_profile
+                                                              request_obj.set_params(params)
 POST       /api/members/:id/valid_vouchers                   vouchers#valid_vouchers
+                                                              id
+                                                              shop_id
+                                                              order_items
+                                                              promotions]
+                                                              order_id]
+                                                              params.fetch(:deliver, Order::FOR_PICKUP).to_i
 POST       /api/members/:id/verify_phone_number_update       members#verify_phone_number_update
+                                                              request_obj.set_params(params)
 POST       /api/membership_plans                             membership_plans#create
+                                                              MISSING METHOD
 POST       /api/merchant/login                               merchants#login
+                                                              request_obj.set_params(params)
 POST       /api/merchant/top_up_request                      merchants#top_up_request
+                                                              request_obj.set_params(params)
 POST       /api/missions                                     missions#create
+                                                              MISSING METHOD
 POST       /api/missions/:id/claim_mission_reward            missions#claim_mission_reward
+                                                              MISSING METHOD
 POST       /api/orders/:id/order_review                      orders#order_review
+                                                              id
+                                                              rating
+                                                              remark
+                                                              image
+                                                              topic
 POST       /api/payments                                     payments#create
+                                                              MISSING METHOD
 POST       /api/payments/get_session                         payments#get_session
+                                                              OK:NO PARAMS
 POST       /api/points_product_redemption_records            points_product_redemption_records#create
+                                                              MISSING METHOD
 POST       /api/points_products                              points_products#create
+                                                              MISSING METHOD
 POST       /api/points_products/:id/redeem                   points_products#redeem
+                                                              id
+                                                              request_obj.set_params(params)
 POST       /api/products                                     products#create
+                                                              MISSING METHOD
 POST       /api/shops                                        shops#create
+                                                              MISSING METHOD
 POST       /api/shops/:id/make_order                         shops#make_order
+                                                              order_id
+                                                              id
+                                                              order_items
+                                                              payment_method
+                                                              promotion_ids
+                                                              voucher_item_ids
+                                                              claim_time
+                                                              claim_status
+                                                              latitude
+                                                              longitude
+                                                              deliver
+                                                              address_id
 POST       /api/top_up_products                              top_up_products#create
+                                                              MISSING METHOD
 POST       /api/top_up_products/:id/make_order               top_up_products#make_order
+                                                              id
+                                                              shop_id
+                                                              request_obj.set_params(params)
 POST       /api/towns                                        towns#create
-
+                                                              MISSING METHOD
