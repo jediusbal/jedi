@@ -1,31 +1,89 @@
 PATCH      /api/companies/:id                                companies#update
+                                                              MISSING METHOD
 PATCH      /api/coupon_codes/:id                             coupon_codes#update
+                                                              MISSING METHOD
 PATCH      /api/discounts/:id                                discounts#update
+                                                              MISSING METHOD
 PATCH      /api/member_addresses/:id                         member_addresses#update
+                                                              id
+                                                              if params[:primary].present? && params[:primary] == "true"
+                                                              fullname
+                                                              address_details
+                                                              address
+                                                              contact_number
+                                                              city
+                                                              state
+                                                              postal_code
+                                                              country
+                                                              land_mark
+                                                              tag
+                                                              latitude
+                                                              longitude
+                                                              delivery_area
+                                                              primary: params[:primary].present? ? params[:primary] : false,
 PATCH      /api/members/:id                                  members#update
+                                                              MISSING METHOD
 PATCH      /api/membership_plans/:id                         membership_plans#update
+                                                              MISSING METHOD
 PATCH      /api/missions/:id                                 missions#update
+                                                              MISSING METHOD
 PATCH      /api/payments/:id                                 payments#update
+                                                              MISSING METHOD
 PATCH      /api/points_product_redemption_records/:id        points_product_redemption_records#update
+                                                              MISSING METHOD
 PATCH      /api/points_products/:id                          points_products#update
+                                                              MISSING METHOD
 PATCH      /api/products/:id                                 products#update
+                                                              MISSING METHOD
 PATCH      /api/shops/:id                                    shops#update
+                                                              MISSING METHOD
 PATCH      /api/top_up_products/:id                          top_up_products#update
+                                                              MISSING METHOD
 PATCH      /api/towns/:id                                    towns#update
+                                                              MISSING METHOD
 
 PUT        /api/companies/:id                                companies#update
+                                                              MISSING METHOD
 PUT        /api/coupon_codes/:id                             coupon_codes#update
+                                                              MISSING METHOD
 PUT        /api/discounts/:id                                discounts#update
+                                                              MISSING METHOD
 PUT        /api/member_addresses/:id                         member_addresses#update
+                                                              id
+                                                              if params[:primary].present? && params[:primary] == "true"
+                                                              fullname
+                                                              address_details
+                                                              address
+                                                              contact_number
+                                                              city
+                                                              state
+                                                              postal_code
+                                                              country
+                                                              land_mark
+                                                              tag
+                                                              latitude
+                                                              longitude
+                                                              delivery_area
+                                                              primary: params[:primary].present? ? params[:primary] : false,
 PUT        /api/members/:id                                  members#update
+                                                              MISSING METHOD
 PUT        /api/membership_plans/:id                         membership_plans#update
+                                                              MISSING METHOD
 PUT        /api/missions/:id                                 missions#update
+                                                              MISSING METHOD
 PUT        /api/payments/:id                                 payments#update
+                                                              MISSING METHOD
 PUT        /api/points_product_redemption_records/:id        points_product_redemption_records#update
+                                                              MISSING METHOD
 PUT        /api/points_products/:id                          points_products#update
+                                                              MISSING METHOD
 PUT        /api/products/:id                                 products#update
+                                                              MISSING METHOD
 PUT        /api/shops/:id                                    shops#update
+                                                              MISSING METHOD
 PUT        /api/top_up_products/:id                          top_up_products#update
+                                                              MISSING METHOD
 PUT        /api/towns/:id                                    towns#update
+                                                              MISSING METHOD
 
 
